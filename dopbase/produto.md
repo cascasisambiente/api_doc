@@ -42,7 +42,7 @@ Atríbuto | Tipo | Descrição | Opções
 produto_id | inteiro | chave primaria | -  
 produto | string | nome do produto de resíduos conforme definição da TRATOLIXO | -  
 sigla | string | sigla da produto | -  
-servico(servico.md) | hash | campos de serviço(servico.md) associado ao produto | -  
+[servico](servico.md) | hash | campos do [serviço](servico.md) associado ao produto | -  
 
 &nbsp;
 ## Listas de produtos
