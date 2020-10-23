@@ -471,6 +471,48 @@ data_ultima_recolha | data | data da recolha mais recente |
 data_ultima_lavagem | data | data da lavagem mais recente |
 niveis_dict | hash | contagem dos níveis de enchimento das recolhas do contentor. Apenas aplicável a contentores de papel, plástico e vidro |
 
+&nbsp;
+## Listas de contentores
+
+As listagens de contentores podem ser obtidas no endpoint respectivo, é possível [filtar](#filtrar-contentores) e [ordenar](#ordenar-contentores) os resultados.
+
+```http request
+GET api/contentores/contentores/
+```
+A resposta venda seguinte forma:
+
+```json
+{
+    "count": 12712,
+    "next": "https://cabi.pt/api/contentores/contentores/?page=3",
+    "previous": "https://cabi.pt/api/contentores/contentores/",
+    "results": [ 
+       "local1",
+       "local2",
+       "..."
+       "localn"
+       ],
+}
+```
+Onde:
+* `count` representa o total de objectos devolvidos
+* `next` representa o link para a pŕoxima página
+* `previous` representa o link para a página anterior
+* `results` representa a lista de resultados até ao máximo do número de elementos por página
+
+
+As respostas vêm paginadas com 20 objecto. É possível alterar o número de registos de cada página através do query parameter ‘per_page’ até ao máximo de 100000 registos.
+
+```http request
+GET api/contentores/contentores
+```
+devolve os resultado com 20 elementos por página
+```http request
+GET api/contentores/contentores/?per_page=1000
+```
+devolve os resultado com 1000 elementos por página
+
+
 
 
 
