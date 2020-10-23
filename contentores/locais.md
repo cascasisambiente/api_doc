@@ -1,5 +1,6 @@
+# Local
 
-Este é um objecto que representa um local físico que agrupa um conjunto de [contentores](#contentor) utilizados para a deposição de um tipo específico de resíduos, definido como [produto](#produto).
+Este é um objecto que representa um local físico que agrupa um conjunto de [contentores](contentores.md) utilizados para a deposição de um tipo específico de resíduos, definido como [produto](../dopbase/produto.md).
 É possível obter um conjunto de locais ou a informação de cada local isoladamente. 
 
 o endpoint só aceita os verbos GET, HEAD e OPTIONS e localiza-se em:
