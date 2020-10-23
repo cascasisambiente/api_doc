@@ -403,3 +403,51 @@ Ordena os resultados primeiro por `datafim` (ordem crecente), depois por `rua` (
 &nbsp;
 # Contentor
 
+
+&nbsp;
+## O objecto contentor
+
+Cada objecto obtêm-se isoladamente através do seu id utilizando, por exemplo:
+ 
+```http request 
+GET api/contentores/contentores/4173
+```
+devolve o objecto com id igual a 4173, com a seguinte estrutura:
+
+```json 
+{
+    "id": 4173,
+    "idcontentor": "481824",
+    "idtransponder": "962C391000004000",
+    "produto": "ind",
+    "tipo": "IND800",
+    "capacidade": 800,
+    "datainicio": "2018-05-06",
+    "datafim": null,
+    "circuitos": [
+          "ind_180",
+          "ind_120"
+          ],
+    "ativo": true,
+    "data_ultima_recolha": null,
+    "data_ultima_lavagem": "2020-08-25",
+    "niveis_dict": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "Sem nível": 0
+     }
+}
+    
+```
+
+&nbsp;
+### Atributos
+
+Atríbuto | Tipo | Descrição | Opções
+-------- | ---- | --------- | ------
+id | inteiro | chave primaria | -  
+
+
