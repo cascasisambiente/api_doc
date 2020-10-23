@@ -180,7 +180,7 @@ Podemos utilizar os seguinte critérios de filtragem:
 * [data_ultima_lavagem](#data_ultima_lavagem)
 
 &nbsp;
-#### tipo
+### tipo
 
 Filtrar por `tipo` devolve todos os resultados que contém o parâmetro de pesquisa no atríbuto tipo.
 A pesquisa não é case sensitive, exemplo:
@@ -189,7 +189,7 @@ A pesquisa não é case sensitive, exemplo:
 GET api/contentores/locais/?tipo=indifer
 ```
 &nbsp;
-#### circuito
+### circuito
 
 Filtrar por `circuito` devolve todos os resultados que contém o parâmetro de pesquisa em qualquer elemento do array de circuitos.
 A pesquisa não é case sensitive, exemplo:
@@ -198,7 +198,7 @@ A pesquisa não é case sensitive, exemplo:
 GET  api/contentores/locais/?circuitos=nd_11
 ```
 &nbsp;
-#### codigolocal
+### codigolocal
 
 Filtrar por `codigolocal` devolve todos os resultados com codigolocal igual ao parâmetro.
 
@@ -210,7 +210,7 @@ Filtrar por `codigolocal__icontains` devolve todos os resultados que o codigoloc
 GET api/contentores/locais/?codigolocal__icontains=002
 ```
 &nbsp;
-#### local
+### local
 
 Filtrar por `local` devolve todos os resultados com local igual ao parâmetro.
 
@@ -222,7 +222,7 @@ Filtrar por `local__icontains` devolve todos os resultados que o local contém o
 GET api/contentores/locais/?local__iexact=002
 ```
 &nbsp;
-#### localidade
+### localidade
 
 Filtrar por `localidade` devolve todos os resultados com localidade igual ao parâmetro.
 
@@ -234,7 +234,7 @@ Filtrar por `localidade__icontains` devolve todos os resultados que a localidade
 GET api/contentores/locais/?localidade=002
 ```
 &nbsp;
-#### rua
+### rua
 
 Filtrar por `rua` devolve todos os resultados com rua igual ao parâmetro.
 
@@ -246,7 +246,7 @@ Filtrar por `rua__icontains` devolve todos os resultados que a rua contém o par
 GET api/contentores/locais/?rua__icontains=abril
 ```
 &nbsp;
-#### numero
+### numero
 
 Filtrar por `numero` devolve todos os resultados com numero igual ao parâmetro.
 
@@ -258,7 +258,7 @@ Filtrar por `numero__icontains` devolve todos os resultados que o numero contém
 GET api/contentores/locais/?numero=7054
 ```
 &nbsp;
-#### elementos
+### elementos
 
 Filtrar por `elementos` devolve todos os resultados que contém o parâmetro de pesquisa em qualquer elemento do array de elementos.
 A pesquisa não é case sensitive, exemplo:
@@ -267,7 +267,7 @@ A pesquisa não é case sensitive, exemplo:
 GET api/contentores/locais/?elementos=cais
 ```
 &nbsp;
-#### ativo
+### ativo
 
 Filtrar por `esta_ativo` devolve todos os resultados em que o ativo é igual ao parâmetro, exemplo:
 
@@ -275,7 +275,7 @@ Filtrar por `esta_ativo` devolve todos os resultados em que o ativo é igual ao 
 GET api/contentores/locais/?esta_ativo=true
 ```
 &nbsp;
-#### contagem de contentores
+### contagem de contentores
 
 Filtrar por `contentores_count` devolve todos os resultados em que o número de contentores é igual ao parâmetro de pesquisa.
 
