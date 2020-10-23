@@ -1,6 +1,6 @@
 # Local
 
-Este é um objecto que representa um local físico que agrupa um conjunto de [contentores](#contentor) utilizados para a deposição de resíduos.
+Este é um objecto que representa um local físico que agrupa um conjunto de [contentores](#contentor) utilizados para a deposição de um tipo específico de resíduos, definido como [produto](#produto).
 É possível obter um conjunto de locais ou a informação de cada local isoladamente. 
 
 o endpoint só aceita os verbos GET, HEAD e OPTIONS e localiza-se em:
@@ -95,7 +95,7 @@ Atríbuto | Tipo | Descrição | Opções
 id | inteiro | chave primaria | 
 tipo | string | categoria | Domicílios<br />Stock<br />Comercial<br />Industrial<br />Aterro<br />Grande produtor<br />Seletiva<br />Misto<br />Indiferenciado<br />Usuário doméstico 
 circuitos | array de strings | lista com os nome dos circuitos que estão associados ao local |
-codigolocal | string | código único de identificação do local no sistema MOBA |
+codigolocal | string | código único do local no sistema MOBA |
 local | string | parte da morada conforme definido no sistema MOBA |
 localidade | string | parte da morada conforme definido no sistema MOBA |
 rua | string | parte da morada conforme definido no sistema MOBA |
@@ -350,7 +350,7 @@ GET api/contentores/locais/?data_ultima_recolha__gte=2020-01-01
 #### data_ultima_lavagem
 
 Filtrar por `data_ultima_lavagem__lte` devolve todos os resultados em que a data_ultima_lavagem é menor ou igual ao parâmetro de pesquisa (data)
-
+utilizados para a deposição de um tipo específico de resíduos, definido como [produto](#produto)
 Filtrar por `data_ultima_lavagem__lt` devolve todos os resultados em que a data_ultima_lavagem é menor do que o parâmetro de pesquisa (data)
 
 Filtrar por `data_ultima_lavagem__gte` devolve todos os resultados em que a data_ultima_lavagem é maior ou igual ao parâmetro de pesquisa (data)
@@ -402,6 +402,14 @@ Ordena os resultados primeiro por `datafim` (ordem crecente), depois por `rua` (
 &nbsp;
 &nbsp;
 # Contentor
+Este é um objecto que representa um recipiente físico utilizado para a depidcontentoridcontentorosição de um tipo específico de resíduos, definido como [produto](#produto).
+É possível obter um conjunto de locais ou a informação de cada local isoladamente. 
+
+o endpoint só aceita os verbos GET, HEAD e OPTIONS e localiza-se em:
+
+```http request
+api/contentores/contentores
+```
 
 
 &nbsp;
@@ -449,5 +457,26 @@ devolve o objecto com id igual a 4173, com a seguinte estrutura:
 Atríbuto | Tipo | Descrição | Opções
 -------- | ---- | --------- | ------
 id | inteiro | chave primaria | -  
+idcontentor | string | código único do contentor no sistema MOBA | -  
+idtransponder | string | código único do tag (associado ao contentor) no sistema MOBA | -  
+produto | string | nome do produto do contentor | -  
+tipo | string | categoria (produto + capacidade) | IND120<br/>IND240<br/>IND800<br/>IND3000 
+produto | inteiro | capacidade de deposição em litros | -  
+circuitos | array de strings | lista com os nome dos circuitos que estão associados ao local |
+ativo | boleano | estado | true<br />false
+geom | objecto geoespacial (ponto) | localização geoespacial (srid=4326) |
+datainicio | data | data de inserção no sistema MOBA |
+datafim | data | data de desativação |
+data_ultima_recolha | data | data da recolha mais recente |
+data_ultima_lavagem | data | data da lavagem mais recente |
+elementos | array de strings | lista com o tipologia de cada elemento pertencente ao local |
+niveis_dict | hash | contagem dos níveis de enchimento das recolhas no local. Apenas aplicável a contentores de papel, plástico e vidro |
+
+
+
+
+&nbsp;
+&nbsp;
+# Produto
 
 
