@@ -462,15 +462,14 @@ idtransponder | string | código único do tag (associado ao contentor) no siste
 produto | string | nome do produto do contentor | -  
 tipo | string | categoria (produto + capacidade) | IND120<br/>IND240<br/>IND800<br/>IND3000<br/>PAP800<br/>PAP1100<br/>PAP2500<br/>PAP5000<br/>PLA800<br/>PLA1100<br/>PLA2500<br/>PLA5000<br/>VID2500<br/>VID3000<br/>ORG240<br/>ORG660<br/>ORG800
 produto | inteiro | capacidade de deposição em litros | -  
-circuitos | array de strings | lista com os nome dos circuitos que estão associados ao local |
+circuitos | array de strings | lista com os nome dos circuitos que estão associados ao contentor |
 ativo | boleano | estado | true<br />false
 geom | objecto geoespacial (ponto) | localização geoespacial (srid=4326) |
 datainicio | data | data de inserção no sistema MOBA |
 datafim | data | data de desativação |
 data_ultima_recolha | data | data da recolha mais recente |
 data_ultima_lavagem | data | data da lavagem mais recente |
-elementos | array de strings | lista com o tipologia de cada elemento pertencente ao local |
-niveis_dict | hash | contagem dos níveis de enchimento das recolhas no local. Apenas aplicável a contentores de papel, plástico e vidro |
+niveis_dict | hash | contagem dos níveis de enchimento das recolhas do contentor. Apenas aplicável a contentores de papel, plástico e vidro |
 
 
 
