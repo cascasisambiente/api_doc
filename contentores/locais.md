@@ -1,4 +1,4 @@
-# Local
+# Documentação API - Local
 
 Este é um objecto que representa um local físico que agrupa um conjunto de [contentores](contentores.md) utilizados para a deposição de um tipo específico de resíduos, definido como [produto](../dopbase/produto.md).
 É possível obter um conjunto de locais ou a informação de cada local isoladamente. 
