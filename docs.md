@@ -460,7 +460,7 @@ id | inteiro | chave primaria | -
 idcontentor | string | código único do contentor no sistema MOBA | -  
 idtransponder | string | código único do tag (associado ao contentor) no sistema MOBA | -  
 produto | string | nome do produto do contentor | -  
-tipo | string | categoria (produto + capacidade) | IND120<br/>IND240<br/>IND800<br/>IND3000 
+tipo | string | categoria (produto + capacidade) | IND120<br/>IND240<br/>IND800<br/>IND3000<br/>PAP800<br/>PAP1100<br/>PAP2500<br/>PAP5000<br/>PLA800<br/>PLA1100<br/>PLA2500<br/>PLA5000<br/>VID2500<br/>VID3000<br/>ORG240<br/>ORG660<br/>ORG800
 produto | inteiro | capacidade de deposição em litros | -  
 circuitos | array de strings | lista com os nome dos circuitos que estão associados ao local |
 ativo | boleano | estado | true<br />false
