@@ -1,7 +1,7 @@
 # Documentação API - Contentores
 
-Este é um objecto que representa um recipiente físico utilizado para a depidcontentoridcontentorosição de um tipo específico de resíduos, definido como [produto](../dopbase/produto.md).
-É possível obter um conjunto de locais ou a informação de cada local isoladamente. 
+Este é um objecto que representa um recipiente físico utilizado para a depisição de um tipo específico de resíduos, definido como [produto](../dopbase/produto.md).
+É possível obter um conjunto de contentores ou a informação de cada contentor isoladamente. 
 
 o endpoint só aceita os verbos GET, HEAD e OPTIONS e localiza-se em:
 
@@ -35,6 +35,7 @@ devolve o objecto com id igual a 4173, com a seguinte estrutura:
           "ind_120"
           ],
     "ativo": true,
+    "uri": "https://cabi.pt/api/contentores/contentores/4173",
     "data_ultima_recolha": null,
     "data_ultima_lavagem": "2020-08-25",
     "niveis_dict": {
@@ -61,7 +62,8 @@ produto | string | nome do produto do contentor | -
 tipo | string | categoria (produto + capacidade) | IND120<br/>IND240<br/>IND800<br/>IND3000<br/>PAP800<br/>PAP1100<br/>PAP2500<br/>PAP5000<br/>PLA800<br/>PLA1100<br/>PLA2500<br/>PLA5000<br/>VID2500<br/>VID3000<br/>ORG240<br/>ORG660<br/>ORG800
 produto | inteiro | capacidade de deposição em litros | -  
 circuitos | array de strings | lista com os nome dos circuitos que estão associados ao contentor |
-ativo | boleano | estado | true<br />false
+ativo | boleano | estado | True<br />False
+uri | string (link) | uniform resource identifier do recurso na API | 
 geom | objecto geoespacial (ponto) | localização geoespacial (srid=4326) |
 datainicio | data | data de inserção no sistema MOBA |
 datafim | data | data de desativação |
@@ -72,8 +74,7 @@ niveis_dict | hash | contagem dos níveis de enchimento das recolhas do contento
 &nbsp;
 ## Listas de contentores
 
-As listagens de contentores podem ser obtidas no endpoint respectivo, é possível [filtar](#filtrar-contentores) e [ordenar](#ordenar-contentores) os resultados.
-
+As listagens de contentores podem ser obtidas no endpoint respectivo, é possível [filtar](#filtragem), [ordenar](#ordenação) e [procurar](#procurar) os resultados.
 ```http request
 GET api/contentores/contentores/
 ```
