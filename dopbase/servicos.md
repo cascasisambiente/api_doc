@@ -1,9 +1,8 @@
 # Documentação API - Serviço
 
 Este é um objecto que define uma tipologia organizacional de resíduos.
-É possível obter um conjunto de locais ou a informação de cada local isoladamente. 
 
-o endpoint só aceita os verbos GET, HEAD e OPTIONS e localiza-se em:
+O endpoint só aceita os verbos GET, HEAD e OPTIONS e localiza-se em:
 
 ```http request
 api/dopbase/servicos
@@ -16,7 +15,7 @@ api/dopbase/servicos
 Cada objecto obtêm-se isoladamente através do seu id utilizando, por exemplo:
  
 ```http request 
-GET api/dopbase/produtos/3/
+GET api/dopbase/servicos/3/
 ```
 devolve o objecto com id igual a 3, com a seguinte estrutura:
 
@@ -41,10 +40,10 @@ sigla | string | sigla do serviço | -
 &nbsp;
 ## Listas de serviços
 
-As listagens de contentores podem ser obtidas no endpoint respectivo.
+As listagens de servicos podem ser obtidas no endpoint respectivo.
 
 ```http request
-GET api/dopbase/produtos
+GET api/dopbase/servicos
 ```
 A resposta venda na forma de array de serviços:
 
