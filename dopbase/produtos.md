@@ -1,7 +1,7 @@
 # Documentação API - Produto
 
 Este é um objecto que um tipo específico de resíduos.
-É possível obter um conjunto de locais ou a informação de cada local isoladamente. 
+É possível obter um conjunto de produtos ou a informação de cada produto isoladamente. 
 
 o endpoint só aceita os verbos GET, HEAD e OPTIONS e localiza-se em:
 
@@ -42,7 +42,7 @@ Atríbuto | Tipo | Descrição | Opções
 produto_id | inteiro | chave primaria | -  
 produto | string | nome do produto de resíduos conforme definição da TRATOLIXO | -  
 sigla | string | sigla da produto | -  
-[servico](servicos.md) | hash | campos do [serviço](servicos.md) associado ao produto | -  
+[servico](servicos.md) | hash | atributos do [serviço](servicos.md) associado ao produto | -  
 
 &nbsp;
 ## Listas de produtos
