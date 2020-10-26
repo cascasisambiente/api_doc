@@ -1,6 +1,6 @@
 # Documentação API - Serviço
 
-Este é um objecto que define uma tipologia organizacional de resíduos.
+Este é um objecto que define uma tipologia organizacional de resíduos. É possível obter um conjunto de serviços ou a informação de cada serviço isoladamente. 
 
 O endpoint só aceita os verbos GET, HEAD e OPTIONS e localiza-se em:
 
