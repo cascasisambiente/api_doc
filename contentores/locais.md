@@ -33,6 +33,7 @@ devolve o objecto com id igual a 2517, com a seguinte estrutura:
     "rua": "Rua do Cabo",
     "numero": "0",
     "ativo": true,
+    "uri": "https://cabi.pt/api/contentores/locais/2517",
     "geom": {
         "type": "Point",
             "coordinates": [
@@ -72,6 +73,7 @@ devolve o objecto com id igual a 2517, com a seguinte estrutura:
                 "ind_120"
                 ],
             "ativo": true,
+            "uri": "https://cabi.pt/api/contentores/contentores/4173",
             "data_ultima_recolha": null,
             "data_ultima_lavagem": "2020-08-25",
             "niveis_dict": {
@@ -101,6 +103,7 @@ localidade | string | parte da morada conforme definido no sistema MOBA |
 rua | string | parte da morada conforme definido no sistema MOBA |
 numero | string | parte da morada conforme definido no sistema MOBA |
 ativo | boleano | estado | true<br />false
+uri | string (link) | uniform resource identifier do recurso na API | 
 geom | objecto geoespacial (ponto) | localização geoespacial (srid=4326) |
 datainicio | data | data de inserção no sistema MOBA |
 datafim | data | data de desativação |
@@ -114,7 +117,7 @@ contentores | array de hashes | lista com objectos do tipo [contentor](#contento
 &nbsp;
 # Listas de Locais
 
-As listagens de locais podem ser obtidas no endpoint respectivo, é possível [filtar](#filtragem) e [ordenar](#ordenação) os resultados.
+As listagens de locais podem ser obtidas no endpoint respectivo, é possível [filtar](#filtragem), [ordenar](#ordenação) e [procurar](#procurar) os resultados.
 
 ```http request
 GET api/contentores/locais/
@@ -397,3 +400,25 @@ Por exemplo:
 GET api/contentores/locais/?ordering=datafim,-rua,-local
 ```
 Ordena os resultados primeiro por `datafim` (ordem crecente), depois por `rua` (ordem decrescente) e finalmente por `local` (ordem decrescente)
+
+
+&nbsp;
+## Procura
+
+podem efectuar-se procurar nos seguintes atributos:
+```http request
+codigolocal
+local
+localidade
+rua
+numero
+```
+
+Para se ordenar utiliza-se o parâmetro `q`, por exemplo:
+
+
+```http request
+GET api/contentores/locais/?q=as
+```
+devolve os resultados onde "as" faz parte de um, ou mais, dos atributos de pesquisa 
+
