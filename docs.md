@@ -7,6 +7,12 @@ https://cabi.pt/
 ```
 
 Encontram-se dísponíveis os seguintes endpoints:
+### base
+ * [subseccao estística](base/subseccoesestatisticas.md)
+ * [bseccao estística](base/seccoesestatisticas.md)
+ * [bairros / localidades](base/localidades.md.md)
+ * [freguesias](base/freguesias.md)
+ * [freguesias novas](base/freguesianovas.md)
 ### dopbase
  * [serviços](dopbase/servicos.md)
  * [produtos](dopbase/produtos.md)
