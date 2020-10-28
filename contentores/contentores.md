@@ -132,6 +132,13 @@ Podemos utilizar os seguinte critérios de filtragem:
 * [datafim](#datafim)
 * [data_ultima_recolha](#data_ultima_recolha)
 * [data_ultima_lavagem](#data_ultima_lavagem)
+* [bairro](#bairro)
+* [data_ultima_lavagem](#data_ultima_lavagem)
+* [freguesia](#freguesia)
+* [freguesianova](#freguesianova)
+* [seccaoestatistica](#seccaoestatistica)
+* [subseccaoestatistica](#subseccaoestatistica)
+
 
 &nbsp;
 ### tipo
@@ -281,6 +288,56 @@ Exemplos:
 GET api/contentores/contentores/?data_ultima_lavagem__dias=50
 
 GET api/contentores/contentores/?data_ultima_lavagem__gte=2020-01-01
+```
+&nbsp;
+### bairro
+
+Filtrar por `bairro` devolve todos os resultados que cuja geometria intersecta a geometria da lista de slugs de bairros(../base/localidades.md), separados por vírgulas
+
+Exemplos:
+
+```http request
+GET api/contentores/contentores/?bairro=cobre,birre,quinta-da-marinha
+```
+&nbsp;
+### freguesia
+
+Filtrar por `freguesia` devolve todos os resultados que cuja geometria intersecta a geometria da lista de slugs de freguesias(../base/freguesias.md) (antes da reforma administrativa de 2013), separados por vírgulas
+
+Exemplos:
+
+```http request
+GET api/contentores/contentores/?freguesia=cascais,sao-domingos-de-rana
+```
+&nbsp;
+### freguesianova
+
+Filtrar por `freguesianova` devolve todos os resultados que cuja geometria intersecta a geometria da lista de slugs de freguesias novas(../base/freguesianovas.md),  (após reforma administrativa de 2013), separados por vírgulas
+
+Exemplos:
+
+```http request
+GET api/contentores/contentores/?bairro=cobre,birre,quinta-da-marinha
+```
+&nbsp;
+### seccaoestatistica
+
+Filtrar por `seccaoestatistica` devolve todos os resultados que cuja geometria intersecta a geometria da lista de códigos de secções estatisticas(../base/seccoesstatisticas.md) (segundo INE), separados por vírgulas
+
+Exemplos:
+
+```http request
+GET api/contentores/contentores/?seccaoestatistica=110501050,110506014
+```
+&nbsp;
+### subseccaoestatistica
+
+Filtrar por `subseccaoestatistica` devolve todos os resultados que cuja geometria intersecta a geometria da lista de códigos de sub secções estatisticas(../base/subseccoesstatisticas.md) (segundo INE), separados por vírgulas
+
+Exemplos:
+
+```http request
+GET api/contentores/contentores/?subseccaoestatistica=11050303703
 ```
 
 
