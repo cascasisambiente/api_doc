@@ -117,6 +117,8 @@ contentores | array de hashes | lista com objectos do tipo [contentor](#contento
 &nbsp;
 # Listas de Locais
 
+## formato de array
+
 As listagens de locais podem ser obtidas no endpoint respectivo, é possível [filtar](#filtragem), [ordenar](#ordenação) e [procurar](#procurar) os resultados.
 
 ```http request
@@ -155,6 +157,14 @@ GET api/contentores/locais/?per_page=1000
 ```
 devolve os resultado com 1000 elementos por página
 
+## formato geojson
+
+para facilitar a execução de mapas, as listagens de locais podem ser obtidas no formato geojson padrão, no mesmo endpoint. para obter os resulatdos neste formato é necessário passar `geojson` como parâmettrro de pesquisa, com qualquer argumento ou vazio. À semelhaça das listas é possível [filtar](#filtragem), [ordenar](#ordenação) e [procurar](#procurar) os resultados. Por exemplo
+
+```http request
+GET api/contentores/locais/?geojson
+```
+Neste caso não existe a possibildiade de paginar os resultados.
 
 
 &nbsp;
